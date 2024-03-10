@@ -7,6 +7,7 @@ authors = [
     {name = "Miguel-Angel Sicilia", email = "msicilia@gmail.com"},
 ]
 dependencies = [
+    "duckdb>=0.10.0",
 ]
 requires-python = ">=3.10"
 readme = "README.md"

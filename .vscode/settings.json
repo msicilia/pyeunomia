@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "DuckDB",
+            "name": "eunomia",
+            "database": "${workspaceFolder:pyeunomia}/eunomia.duckdb"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

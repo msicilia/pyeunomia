@@ -1,5 +1,5 @@
-import sqlite3
 from pathlib import Path
+import duckdb
 
 class Singleton(type):
     """Singleton metaclass."""
@@ -10,11 +10,11 @@ class Singleton(type):
         return cls._instances[cls]
 
 class Eunomia(metaclass=Singleton):
-    """Represents the Eunomia database, an OMOM CDM test database."""
-    _sqlite_con = None
+    """Represents the Eunomia database, an OMOP CDM test database."""
+    _duckdb_con = None
     def connect(self):
         """Returns a connection to the Eunomia database."""
-        if not self._sqlite_con:
+        if not self._duckdb_con:
             wd = Path(__file__).resolve().parent
-            self._sqlite_con = sqlite3.connect(wd / "data" / "cdm.sqlite")
-        return self._sqlite_con
+            self._duckdb_con = duckdb.connect(database = f"{wd}/data/eunomia.duckdb", read_only = False)
+        return self._duckdb_con

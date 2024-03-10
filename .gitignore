@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# CSV files from the Eunomia R package
+/src/pyeunomia/csv
+
 # Distribution / packaging
 .Python
 build/
