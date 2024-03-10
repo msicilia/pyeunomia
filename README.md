@@ -2,7 +2,7 @@
 
 Eunomia is a standard dataset in the OMOP (Observational Medical Outcomes Partnership) Common Data Model (CDM) for testing and demonstration purposes. Eunomia is used for many of the exercises in the [Book of OHDSI](https://ohdsi.github.io/TheBookOfOhdsi/).
 
-This library is just a simple wrapper for the SQLite Eunomia database. 
+This library is just a simple wrapper for a Duckdb database created from the CSV export available in the  `exportToCsv` function. 
 
 ## Usage
 
